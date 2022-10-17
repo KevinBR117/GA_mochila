@@ -1,0 +1,8 @@
+manzana 52 0.15
+naranja 45 0.15
+pan_dulce 276 0.169
+refresco 180 0.4
+chocolate 250 0.052
+pera 57 0.25
+melon 300 0.9
+papitas 312 0.1
