@@ -15,8 +15,8 @@ poblacion = []
 nueva_poblacion = []
 mutacion = 1
 max_gen = 10
-calorias_max = 800
-peso_min = 1.5
+calorias_min = 800
+peso_max = 1.3
 
 def crear_poblacion_inicial(N):
     for i in range(N):
@@ -40,6 +40,7 @@ def crear_poblacion_inicial(N):
 def cruzar_inidividuos(poblacion):
     for i in range(0,len(poblacion),2):
         # obtener individuo
+        # print(i)
         individuo1 = poblacion[i][:len(lista_productos)]
         individuo2 = poblacion[i+1][:len(lista_productos)]
 
@@ -107,7 +108,7 @@ def mostrar_mejor_mochila():
 
     for i in range(len(nueva_poblacion)):
         individuo = nueva_poblacion[i]
-        if (individuo[8] <= calorias_max) and (individuo[9] <= peso_min):
+        if (individuo[8] >= calorias_min) and (individuo[9] <= peso_max):
             mejor_individuo = individuo
     print(f'mejor individuo: {mejor_individuo}')
 
